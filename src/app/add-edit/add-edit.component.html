@@ -1,0 +1,116 @@
+<div class="component">
+  <form
+    class="form flex justify-center mt-10 flex-col items-center p-4 border-blue-400"
+    [formGroup]="formGroup"
+  >
+    <h1 class="mb-7 font-semibold">მომხმარებლის რედაქტირება</h1>
+    <div class="flex flex-col w-[350px] mb-6">
+      <input
+        type="text"
+        class="w-full border-[1.5px] border-[#8ac0e2] rounded-md pl-2 h-10"
+        [class.red-border]="
+          formGroup.get('name')?.invalid && formGroup.get('name')?.touched
+        "
+        placeholder="სახელი"
+        formControlName="name"
+      />
+    </div>
+    <div class="flex flex-col w-[350px] mb-6">
+      <input
+        type="text"
+        class="w-full border-[1.5px] border-[#8ac0e2] rounded-md pl-2 h-10"
+        [class.red-border]="
+          formGroup.get('surname')?.invalid && formGroup.get('surname')?.touched
+        "
+        placeholder="გვარი"
+        formControlName="surname"
+      />
+    </div>
+    <div class="flex flex-col w-[350px] mb-6">
+      <input
+        type="text"
+        class="w-full border-[1.5px] border-[#8ac0e2] rounded-md pl-2 h-10"
+        [class.red-border]="
+          formGroup.get('personalNumber')?.invalid &&
+          formGroup.get('personalNumber')?.touched
+        "
+        placeholder="პირადი ნომერი"
+        formControlName="personalNumber"
+      />
+    </div>
+    <div class="flex flex-col w-[350px] mb-4">
+      <input
+        type="date"
+        class="w-full border-[1.5px] border-[#8ac0e2] rounded-md pl-2 h-10"
+        [class.red-border]="
+          formGroup.get('date')?.invalid && formGroup.get('date')?.touched
+        "
+        formControlName="date"
+      />
+      <small
+        [class.red-text]="
+          ageHint ||
+          (formGroup.get('date')?.invalid && formGroup.get('date')?.touched)
+        "
+        >ასაკის შეზღუდვა +18</small
+      >
+    </div>
+    <small
+      class="mb-2 font-semibold"
+      [class.red-text]="
+        formGroup.get('gender')?.invalid && formGroup.get('gender')?.touched
+      "
+      >გთხოვთ აირჩიოთ სქესი</small
+    >
+    <div class="flex justify-between w-[350px] mb-6">
+      <label class="flex justify-between gap-[6px]">
+        <input type="radio" value="მამრობითი" formControlName="gender" />
+        <span>მამრობითი</span>
+      </label>
+      <label class="flex justify-between gap-[6px]">
+        <input type="radio" value="მდედრობითი" formControlName="gender" />
+        <span>მდედრობითი</span>
+      </label>
+    </div>
+    <div class="flex flex-col w-[350px] mb-6">
+      <select
+        name="city"
+        class="w-full border-[1.5px] border-[#8ac0e2] rounded-md pl-2 h-10"
+        [class.red-border]="
+          formGroup.get('city')?.invalid && formGroup.get('city')?.touched
+        "
+        formControlName="city"
+      >
+        <option value="" selected hidden>აირჩიე ქალაქი</option>
+        <option value="city" *ngFor="let city of cities">{{ city }}</option>
+      </select>
+    </div>
+    <div class="flex flex-col w-[350px] mb-6">
+      <input
+        type="text"
+        class="w-full border-[1.5px] border-[#8ac0e2] rounded-md pl-2 h-10"
+        [class.red-border]="
+          formGroup.get('address')?.invalid && formGroup.get('address')?.touched
+        "
+        placeholder="მისამართი"
+        formControlName="address"
+      />
+    </div>
+    <div class="flex flex-row justify-between w-[350px] mb-10">
+      <button
+        type="button"
+        class="bg-gray-500 text-white rounded-xl p-2"
+        (click)="onCancelClick()"
+      >
+        გაუქმება
+      </button>
+      <button
+        class="bg-blue-800 text-white rounded-xl p-2"
+        type="button"
+        (click)="onSubmitClick()"
+      >
+        დასრულება
+      </button>
+    </div>
+  </form>
+</div>

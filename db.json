@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "name": "ნიკა",
+      "surname": "გიორგაძე",
+      "personalNumber": "01005045100",
+      "date": "12-02-2001",
+      "gender": "მამრობითი",
+      "city": "თბილისი",
+      "address": "მიცკევიჩის 15",
+      "id": 3
+    },
+    {
+      "name": "asdasdsad",
+      "surname": "asdasdsa",
+      "personalNumber": "asdasdasd",
+      "date": "2023-02-15",
+      "gender": "მამრობითი",
+      "city": "city",
+      "address": "sdasdasd",
+      "id": 4
+    },
+    {
+      "name": "asdasd",
+      "surname": "asdasdsa",
+      "personalNumber": "01005045130",
+      "date": "2020-10-28",
+      "gender": "მამრობითი",
+      "city": "city",
+      "address": "12312321321",
+      "id": 6
+    },
+    {
+      "name": "asdasdasd",
+      "surname": "asdasd",
+      "personalNumber": "01005045132",
+      "date": "2022-10-30",
+      "gender": "მამრობითი",
+      "city": "city",
+      "address": "asdasdasd",
+      "id": 7
+    },
+    {
+      "name": "ნიკა",
+      "surname": "გიორგაძე",
+      "personalNumber": "01005045102",
+      "date": "12-02-2001",
+      "gender": "მამრობითი",
+      "city": "თბილისი",
+      "address": "მიცკევიჩის 15",
+      "id": 8
+    },
+    {
+      "name": "giorgi222",
+      "surname": "sslslsl",
+      "personalNumber": "01004422304",
+      "date": "1997-12-17",
+      "gender": "მდედრობითი",
+      "city": "city",
+      "address": "123123123123123",
+      "id": 10
+    }
+  ]
+}
