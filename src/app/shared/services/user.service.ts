@@ -2,12 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { merge, Observable, Subject, tap } from 'rxjs';
 import { User } from '../models/user.interface';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  baseUrl: string = 'http://localhost:3000/users';
+  baseUrl: string = environment.baseUrl;
   userEditted$ = new Subject<User>();
   userRemoved$ = new Subject<number>();
   userAdded$ = new Subject<User>();

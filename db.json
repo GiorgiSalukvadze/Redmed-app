@@ -59,6 +59,16 @@
       "city": "city",
       "address": "123123123123123",
       "id": 10
+    },
+    {
+      "name": "asdasdkas",
+      "surname": "jdaksdjaskjd",
+      "personalNumber": "01000504522",
+      "date": "1991-10-24",
+      "gender": "მამრობითი",
+      "city": "city",
+      "address": "123123123sadasd",
+      "id": 11
     }
   ]
 }

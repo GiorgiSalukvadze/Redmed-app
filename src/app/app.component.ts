@@ -16,7 +16,6 @@ export class AppComponent {
     this.editMode = false;
   }
   gotUser(user: User) {
-    console.log(user);
     this.editMode = true;
     this.userForEdit = user;
   }

@@ -63,26 +63,24 @@ export class AddEditComponent implements OnInit {
     this.formGroup.reset();
   }
 
-  validYear() {}
+  validYear() {
+    return (
+      new Date().getFullYear() -
+        this.formGroup.get?.('date')?.value.split('-')[0] >=
+      18
+    );
+  }
 
   onSubmitClick() {
     if (this.formGroup.valid) {
-      if (
-        new Date().getFullYear() -
-          this.formGroup.get?.('date')?.value.split('-')[0] >=
-        18
-      ) {
+      if (this.validYear()) {
         if (this.userForEdit) {
           this.userService
             .updateUser(this.userForEdit.id!, this.formGroup.value)
-            .subscribe((res) => {
-              console.log(res);
-            });
+            .subscribe((res) => {});
           this.onCancelClick();
         } else {
-          this.userService.addUser(this.formGroup.value).subscribe((res) => {
-            console.log(res);
-          });
+          this.userService.addUser(this.formGroup.value).subscribe((res) => {});
           this.onCancelClick();
         }
         this.formGroup.reset();

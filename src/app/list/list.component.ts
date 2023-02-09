@@ -23,8 +23,6 @@ export class ListComponent implements OnInit {
     this.userForEdit.emit(user);
   }
   onDeleteClick(user: User) {
-    this.userService.removeUser(user).subscribe((res) => {
-      console.log(res);
-    });
+    this.userService.removeUser(user).subscribe((res) => {});
   }
 }
