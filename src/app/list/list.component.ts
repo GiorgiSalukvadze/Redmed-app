@@ -10,8 +10,8 @@ import { UserService } from '../shared/services/user.service';
 })
 export class ListComponent implements OnInit {
   @Output() userForEdit = new EventEmitter<User>();
-  constructor(private userService: UserService) {}
   users$!: Observable<User[]>;
+  constructor(private userService: UserService) {}
   ngOnInit(): void {
     this.users$ = this.userService.userUpdated$.pipe(
       startWith(null),

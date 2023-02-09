@@ -69,6 +69,16 @@
       "city": "city",
       "address": "123123123sadasd",
       "id": 11
+    },
+    {
+      "name": "asdasdasd",
+      "surname": "asdasdasd",
+      "personalNumber": "01005045123",
+      "date": "1999-12-29",
+      "gender": "მამრობითი",
+      "city": "ზუგდიდი",
+      "address": "123123123",
+      "id": 12
     }
   ]
 }
